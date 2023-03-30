@@ -40,6 +40,9 @@
             <a href="#portfolio" class="nav__link">Portfolio</a>
           </li>
           <li class="nav__item">
+            <a href="profile.html" class="nav__link">Profile</a>
+          </li>
+          <li class="nav__item">
             <a href="#fo-ooter" class="nav__link">Contact</a>
           </li>
 
@@ -55,43 +58,15 @@
 
   <main class="l-main">
     <!--========== HOME ==========-->
-    <section class="home" id="home" style="margin: 4% 0 0 0;">
-      <div class="home__container bd-container bd-grid">
-        <div class="home__data">
-          <h1 class="home__title ">I Am Sinovuyo</h1>
-          <h2 class="home__subtitle ">
-            C# .NET FULL STACK DEVELOPER WITH A
-            KEEN EYE FOR DETAIL
-          </h2>
-          <a href="tel:0786761751" class="button">Contact</a>
-          <a href="https://drive.google.com/file/d/1vWg29ygNWjzCrOY7RcbdEZP-ankyV7JE/view?usp=sharing" download="file"
-            class="button">download my CV</a>
-        </div>
-        <img src="images/me.jpg" alt="" class="home__img" />
-      </div>
-    </section>
-
+    <section class="home" style="margin: 4% 0 0 0;"><iframe id="home" src="home.html" frameBoarder="0" height="800" width="100%"></iframe></section>
+    
     <!--========== ABOUT ==========-->
-    <section class="about section bd-container" id="about">
-      <div class="about__container bd-grid">
-        <div class="about__data">
-          <span class="section-subtitle about__initial"></span>
-          <h2 class="section-title about__initial">
-
-          </h2>
-          <p class="about__description" id="typedtext">
-          </p>
-        </div>
-
-        <img src="images/snow.jpg" alt="" class="about__img" />
-      </div>
-    </section>
+    <iframe id="about" src="about.html"  height="450" width="100%"></iframe>
 
     <!--========== portfolio ==========-->
     <section class="services section bd-container" id="portfolio">
       <span class="section-subtitle"></span>
       <h2 class="section-title"></h2>
-
       <div class="portfolio__container bd-grid">
         <div class="portfolio__content">
           <h3 class="portfolio__title">Take A Look At My Work</h3>
@@ -101,34 +76,21 @@
         </div>
       </div>
     </section>
-    <!--========== FOOTER ==========-->
-    <footer class="footer section bd-container" id="fo-ooter">
-      <div class="footer__container ">
-        <div class="footer__content">
-          <a href="#" class="footer__logo"></a>
-          <span class="footer__description">Connect with me:</span>
-          <div class="footercontent">
-            <a href="https://web.facebook.com/Sinovuyo97" class="footer__button"
-              data-show-count="false"><i class="bx bxl-facebook"></i></a>
-            <script async src="https://platform.facebook.com/widgets.js" charset="utf-8"></script></a>
-            <a href="https://www.instagram.com/sinovuyo_snow97" class="footer__button"
-              data-show-count="false"><i class="bx bxl-instagram"></i></a>
-            <script async src="https://platform.instagram.com/widgets.js" charset="utf-8"></script></a>
-            <a href="https://twitter.com/Sinovuyo971?ref_src=twsrc%5Etfw" class="footer__button"
-              data-show-count="false"><i class="bx bxl-twitter"></i></a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <a href="mailto:sinovuyoshakes@gmail.com?body=Hello Sir...."
-              class="footer__button"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-            <a href="https://github.com/Sinovuyo97"
-              class="footer__button"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
-            <a href='https://wa.me/+27786761751?text=Hello sir' target='_blank'
-              class="footer__button"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-            <a href="sms:+27782283930?body=Hello Mr...."
-              class="footer__button"><i class="fa fa-commenting" aria-hidden="true"></i></a>
-          </div>
+
+    <!--========== profile ==========-->
+    <!-- <section class="services section bd-container" id="profile">
+      <span class="section-subtitle"></span>
+      <h2 class="section-title"></h2>
+      <div class="profile__container bd-grid">
+        <div class="profile__content">
+          <h3 class="profile__title">Take A Look At My Profile</h3>
+          <a href="profile.html" class="profile__button">Profile</a>
         </div>
       </div>
-    </footer>
+    </section> -->
+    
+    <!--========== FOOTER ==========-->
+    <iframe id="fo-ooter" src="contact.html" frameBoarder="0" height="265" width="100%" scrolling="auto"></iframe>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
