@@ -1,5 +1,26 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* // Functions first */
+@import "../node_modules/bootstrap/scss/functions";
+/* 
+// Variable overrides second */
+/* $primary: #900;
+$enable-shadows: true;
+$prefix: "mo-"; */
+
+/* // Required Bootstrap imports */
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+/* // Optional components */
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -853,4 +874,70 @@ textarea.input {
     .home__container {
         height: 640px;
     }
+}
+hr{
+  border-top: 1px dashed gray;
+}
+/* count down loader */
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+.card-link{
+  text-decoration: none;
+  color: #707070;
+}
+.card-link:hover{
+  color: #707070;
+  transition: 2s;
+  text-transform: var(--font-semi-bold);
 }
