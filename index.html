@@ -96,7 +96,30 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--========== MAIN JS ==========-->
-    <script src="js/main.js"></script>
+    <script type="text/javascript">
+      // Track visitors and send email notification
+      function trackVisitors() {
+        var email = "sinovuyoshakes@gmail.com"; // Replace with your email address
+        var currentCount = parseInt(localStorage.getItem('visitorCount')) || 0;
+        var newCount = currentCount + 1;
+        localStorage.setItem('visitorCount', newCount);
+        if (newCount === 1) {
+          sendEmailNotification(email, newCount);
+        }
+      }
+    
+      // Send email notification
+      function sendEmailNotification(email, count) {
+        var subject = "New visitor to your website!";
+        var body = "Your website has received a new visitor. Total visitors so far: " + count;
+        var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        window.location.href = mailtoLink;
+      }
+    
+      // Call the trackVisitors function when the page loads
+      window.onload = trackVisitors;
+    </script>
+    
 </body>
 
 </html>
