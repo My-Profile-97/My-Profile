@@ -46,7 +46,7 @@ window.addEventListener('scroll', scrollActive)
 /*==============================typeWriter==================================*/
 // set up text to print, each item in array is new line
 var aText = new Array("Throughout the course of my career, I have perfected my technical and communication abilities. I am a capable and consistent problem-solver skilled at prioritizing and managing projects with proficiency. In my previous role, I contributed communication, critical thinking, and technical skill toward team efforts and business improvements. I am progressive minded and in tune with new developments in my field. I have proven to be effective and collaborative with strong collaboration talents. I enjoy collective brainstorming sessions which all me to coordinate activities to achieve a common goal.");
-var iSpeed = 100; // time delay of print out
+var iSpeed = 150; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
 var iScrollAt = 20; // start scrolling up at this many lines
@@ -63,7 +63,7 @@ function typewriter() {
     while (iRow < iIndex) {
         sContents += aText[iRow++] + '<br />';
     }
-    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "|";
     if (iTextPos++ == iArrLength) {
         iTextPos = 0;
         iIndex++;
