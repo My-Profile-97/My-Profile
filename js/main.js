@@ -1,3 +1,4 @@
+
 // Track visitors and send email notification
 function trackVisitors() {
   var email = "sinovuyoshakes@gmail.com"; // Replace with your email address
@@ -12,19 +13,21 @@ function trackVisitors() {
 // Send email notification
 function sendEmailNotification(email, count) {
   const options = {
-    method: "POST",
+    method: 'POST',
     headers: {
-      "content-type": "application/json",
-      "X-RapidAPI-Key": "0a1eafe8c8msh422e2b65e417463p13d7e7jsn019ba2a0d267",
-      "X-RapidAPI-Host": "rapidprod-sendgrid-v1.p.rapidapi.com",
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': '40c05ede13mshc5f0bb49164c9dbp1b826bjsn691e63726ed1',
+      'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
     },
-    body: `{"personalizations":[{"to":[{"email":"${email}"}],"subject":"A visitor on your website!"}],"from":{"email":"sinovuyo.sikhisi97@yahoo.com"},"content":[{"type":"text/plain","value":"Your website has received a new visitor. Total visitors so far: ${count}"}]}`,
+    body: `{"personalizations":[{"to":[{"email":"sinovuyoshakes@gmail.com"}],"subject":"New visitor to your website"}],"from":{"email":"from_address@example.com"},"content":[{"type":"text/plain","value":"Your website has received a new visitor. Total visitors so far: ${count}"}]}`
   };
+  
+  fetch('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
 
-  fetch("https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send", options)
-    .then((response) => response.json())
-    .then((response) => console.log(response))
-    .catch((err) => console.error(err));
+    // cors: https://proxy.cors.sh/ , 
   //   var subject = "New visitor to your website!";
   //   var body =
   //     "Your website has received a new visitor. Total visitors so far: " + count;
