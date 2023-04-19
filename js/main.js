@@ -19,7 +19,7 @@ function sendEmailNotification(email, count) {
       'X-RapidAPI-Key': '40c05ede13mshc5f0bb49164c9dbp1b826bjsn691e63726ed1',
       'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com'
     },
-    body: `{"personalizations":[{"to":[{"email":"sinovuyoshakes@gmail.com"}],"subject":"New visitor to your website"}],"from":{"email":"from_address@example.com"},"content":[{"type":"text/plain","value":"Your website has received a new visitor. Total visitors so far: ${count}"}]}`
+    body: `{"personalizations":[{"to":[{"email":"sinovuyoshakes@gmail.com"}],"subject":"New visitor to your website"}],"from":{"email":"Sinovuyo@example.com"},"content":[{"type":"text/plain","value":"Your website has received a new visitor. Total visitors so far: ${count}"}]}`
   };
   
   fetch('https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send', options)
