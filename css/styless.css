@@ -1,5 +1,6 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels:wght@400;500;600&display=swap');
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -159,7 +160,12 @@ img{
   justify-content: space-between;
   align-items: center;
 }
-
+.snow{
+  font-family: 'Rubik Pixels', cursive;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 40px;
+}
 @media screen and (max-width: 768px){
   .nav__menu{
     position: fixed;
